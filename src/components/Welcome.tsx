@@ -1,3 +1,4 @@
+import { ImageFallback } from '@/lib/ImageFallback';
 export default function Welcome() {
   return (
     <section className="bg-brand-dark text-white pt-10 pb-32 px-16 flex justify-center relative z-20 -mb-16">
@@ -15,11 +16,7 @@ export default function Welcome() {
         
         {/* Maskot Kanan[cite: 5] */}
         <div className="w-1/2 flex justify-center">
-          <img 
-            src="/images/maskot_1.webp" 
-            alt="Chicken Mascot" 
-            className="w-72 drop-shadow-xl hover:-translate-y-3 transition-transform duration-500 scale-200" 
-          />
+          <ImageFallback src="/images/maskot_1.webp" alt="Chicken Mascot" className="w-72 drop-shadow-xl hover:-translate-y-3 transition-transform duration-500 scale-200" />
         </div>
       </div>
     </section>

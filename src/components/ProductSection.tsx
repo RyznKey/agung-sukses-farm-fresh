@@ -1,4 +1,5 @@
 import { Leaf } from 'lucide-react';
+import { ImageFallback } from '@/lib/ImageFallback';
 import db from '@/data/db.json';
 
 export default function ProductSection() {

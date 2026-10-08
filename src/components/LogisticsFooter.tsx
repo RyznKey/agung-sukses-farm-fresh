@@ -1,4 +1,11 @@
+"use client"
+import { useState, useEffect } from 'react';
+import { ImageFallback } from '@/lib/ImageFallback';
 export default function LogisticsFooter() {
+  const [currentYear, setCurrentYear] = useState<number | string>("—");
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   return (
     <div className="flex flex-col relative z-0">
       {/* Area Logistics Hitam Miring[cite: 5] */}
@@ -8,17 +15,9 @@ export default function LogisticsFooter() {
       >
         <div className="max-w-6xl mx-auto flex items-center gap-16 skew-y-3">
           <div className="w-1/2 flex justify-center relative">
-            <img
-              src="/images/logistics-boxes.png"
-              alt="Chicken Delivery Boxes"
-              className="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500 relative z-10"
-            />
+            <ImageFallback src="/images/logistics-boxes.png" alt="Chicken Delivery Boxes" className="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500 relative z-10" />
             {/* Siluet Ayam Latar Belakang[cite: 5] */}
-            <img
-              src="/images/chicken-silhouette.png"
-              alt="Silhouette"
-              className="absolute -right-10 bottom-0 opacity-10 w-64 grayscale pointer-events-none"
-            />
+            <ImageFallback src="/images/chicken-silhouette.png" alt="Silhouette" className="absolute -right-10 bottom-0 opacity-10 w-64 grayscale pointer-events-none" />
           </div>
           <div className="w-1/2 pl-10">
             <h2 className="text-brand-red text-[4rem] font-script mb-6 drop-shadow-md">
@@ -118,9 +117,8 @@ export default function LogisticsFooter() {
             </p>
           </div>
         </div>
-        <div className="text-center text-[10px] opacity-70 font-sans">
-          &copy; {new Date().getFullYear()} PT. Agung Sukses Farm Fresh. All
-          rights reserved.
+        <div className="text-center text-[10px] opacity-70 font-sans" >
+          &copy; {currentYear} PT. Agung Sukses Farm Fresh. All rights reserved.
         </div>
       </section>
     </div>

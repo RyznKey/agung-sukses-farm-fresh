@@ -1,5 +1,7 @@
 import { Phone, MapPin, Mail, ChevronRight} from 'lucide-react';
 
+import { ImageFallback } from '@/lib/ImageFallback';
+
 export default function Home() {
   const wholesaleItems = [
     { id: 1, name: "Whole Chicken", sub: "Premium Grade Quality", image: "/images/whole-chicken.png" },

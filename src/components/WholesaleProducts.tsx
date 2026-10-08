@@ -1,3 +1,4 @@
+import { ImageFallback } from '@/lib/ImageFallback';
 export default function WholesaleProducts() {
   const products = [
     { id: 1, name: "Whole Chicken", sub: "Broiler", image: "/images/whole-chicken.png" },
@@ -14,7 +15,7 @@ export default function WholesaleProducts() {
         <div className="md:w-5/12 bg-brand-pink pt-40 pb-28 px-16 flex flex-col justify-center rounded-br-[100px]">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-brand-red">
-               <img src="/images/chicken-logo-circle.png" alt="Chicken Logo" className="w-16 h-16" />
+               <ImageFallback src="/images/chicken-logo-circle.png" alt="Chicken Logo" className="w-16 h-16" />
             </div>
             <h2 className="text-6xl font-script text-brand-dark leading-[1.1]">
               Online <br/>
@@ -45,7 +46,7 @@ export default function WholesaleProducts() {
               </div>
 
               <div className="p-8 flex justify-center items-center h-52 bg-white">
-                <img src={product.image} alt={product.name} className="w-36 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-md" />
+                <ImageFallback src={product.image} alt={product.name} className="w-36 object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-md" />
               </div>
               
               {/* Box Merah Deskripsi[cite: 5] */}

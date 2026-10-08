@@ -1,5 +1,6 @@
+// "use client";
 import type { Metadata } from "next";
-import {Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
+import { Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/Navbar';
 import LogisticsFooter from '@/components/LogisticsFooter';
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="id"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className= {`${inter.variable} ${serif.variable} font-sans bg-gray-50 min-h-full flex flex-col`}>
+      <body className={`${inter.variable} ${serif.variable} font-sans bg-gray-50 min-h-full flex flex-col`}>
         <NavBar />
         {children}
         {/* Footer component diletakkan di sini */}

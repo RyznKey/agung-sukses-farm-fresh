@@ -9,13 +9,28 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'text-farm-dark': '#1a2e1a',
+        // Primary palette
+        primary: {
+          green: '#28a745', // default green
+          red: '#dc2626', // default red
+          dark: '#1f2937', // default dark
+          light: '#f3f4f6', // default light
+        },
+        // Secondary palette
+        secondary: {
+          yellow: '#fbbf24', // default yellow
+        },
+        // Brand specific colors
+        brand: {
+          dark: '#0f172a',
+          red: '#b91c1c',
+        },
+        // Retain any custom farm colors if still needed elsewhere
         farm: {
-          green: "#103C23", // Warna utama hijau tua dari logo dan navbar atas
-          yellow: "#F5A623", // Warna kuning mustard dari tombol "Get in Touch"
-          dark: "#1F2937", // Teks abu-abu gelap
-          light: "#F9FAFB", // Latar belakang abu-abu sangat muda
-          
+          green: "#103C23",
+          yellow: "#F5A623",
+          dark: "#1F2937",
+          light: "#F9FAFB",
         },
       },
       fontFamily: {
