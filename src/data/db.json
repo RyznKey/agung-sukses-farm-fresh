@@ -1,0 +1,58 @@
+{
+  "company": {
+    "name": "Agung Sukses Farm Fresh",
+    "address": "Jl. Peternakan No. 123, Jawa Barat, Indonesia",
+    "phone": "(021) 555-7890",
+    "email": "info@agungsuksesfarm.com",
+    "hours": "Senin - Sabtu: 07.00 - 18.00"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Ayam Segar",
+      "description": "Ayam segar peternakan, dipelihara dengan pakan alami untuk nutrisi dan rasa terbaik.",
+      "image": "/images/fresh-chicken.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Telur Segar",
+      "description": "Telur berkualitas tinggi, kaya protein dari ayam yang sehat dan bahagia.",
+      "image": "/images/eggs.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Daging Ayam",
+      "description": "Daging ayam yang empuk, higienis, dan diproses segar untuk keluarga Anda.",
+      "image": "/images/chicken-meat.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Anak Ayam (DOC)",
+      "description": "Anak ayam usia sehari yang sehat untuk awal yang baik bagi peternakan Anda.",
+      "image": "/images/chicks.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Budi Santoso",
+      "location": "Jakarta",
+      "quote": "Kualitas ayam dan telur dari Agung Sukses Farm Fresh sangat luar biasa! Selalu segar dan lezat.",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Siti Rahma",
+      "location": "Bandung",
+      "quote": "Kami pesan grosir untuk restoran kami. Produknya konsisten, segar, dan dikirim tepat waktu.",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "Agus Pratama",
+      "location": "Surabaya",
+      "quote": "Ayam yang sehat, lingkungan bersih, dan pelayanan pelanggan yang luar biasa! Sangat direkomendasikan.",
+      "rating": 5
+    }
+  ]
+}
