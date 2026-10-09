@@ -11,34 +11,15 @@ export default function LogisticsFooter() {
       {/* Area Logistics Hitam Miring[cite: 5] */}
       <section
         id="logistics"
-        className="bg-brand-dark text-white py-40 px-16 -skew-y-3 -mt-20 pb-48"
+        className="bg-brand-dark text-white py-20 md:py-40 px-8 md:px-16 -skew-y-3 -mt-20 pb-48"
       >
-        <div className="max-w-6xl mx-auto flex items-center gap-16 skew-y-3">
-          <div className="w-1/2 flex justify-center relative">
-            <ImageFallback src="/images/logistics-boxes.png" alt="Chicken Delivery Boxes" className="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500 relative z-10" />
-            {/* Siluet Ayam Latar Belakang[cite: 5] */}
-            <ImageFallback src="/images/chicken-silhouette.png" alt="Silhouette" className="absolute -right-10 bottom-0 opacity-10 w-64 grayscale pointer-events-none" />
-          </div>
-          <div className="w-1/2 pl-10">
-            <h2 className="text-brand-red text-[4rem] font-script mb-6 drop-shadow-md">
-              Logistics
-            </h2>
-            <p className="text-gray-400 text-xs leading-relaxed mb-8 pr-12">
-              A smooth and secure supply chain ensures our poultry products
-              arrive fresh and on time. We handle bulk and wholesale delivery
-              efficiently to your doorstep.
-            </p>
-            <button className="bg-brand-red text-white px-8 py-3 rounded-full text-[11px] font-bold hover:bg-white hover:text-brand-red transition-colors shadow-lg flex items-center gap-2">
-              Read More <span>→</span>
-            </button>
-          </div>
-        </div>
+
       </section>
 
       {/* Footer Merah dengan Banner Brands Putih Oval[cite: 5] */}
-      <section className="bg-brand-red pt-36 pb-16 px-16 relative -mt-24">
+      <section className="bg-brand-red pt-12 md:pt-36 pb-16 px-8 md:px-16 relative -mt-24">
         {/* Banner Oval 'Our Brands'[cite: 5] */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-10/12 max-w-5xl rounded-[60px] py-8 px-16 shadow-[0_20px_40px_rgba(0,0,0,0.3)] flex items-center justify-between z-20">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-11/12 md:w-10/12 max-w-5xl rounded-[60px] py-4 md:py-8 px-4 md:px-16 shadow-[0_20px_40px_rgba(0,0,0,0.3)] flex items-center justify-between z-20">
           <h3 className="text-brand-red text-[4rem] font-script leading-none">
             Our
             <br />
@@ -70,7 +51,7 @@ export default function LogisticsFooter() {
             <h4 className="font-bold text-xs uppercase mb-6 tracking-widest">
               Sitemap
             </h4>
-            <ul className="text-[11px] space-y-3 opacity-80">
+            <ul className="text-xs space-y-3 opacity-80">
               <li>
                 <a href="#" className="hover:underline">
                   Home
@@ -107,17 +88,17 @@ export default function LogisticsFooter() {
             <h4 className="font-bold text-xs uppercase mb-6 tracking-widest">
               Get In Touch
             </h4>
-            <p className="text-[11px] opacity-80 mb-2 font-bold">
+            <p className="text-xs opacity-80 mb-2 font-bold">
               +65 11 4849-3550
             </p>
-            <p className="text-[11px] opacity-80 leading-relaxed">
+            <p className="text-xs opacity-80 leading-relaxed">
               Jalan Peternakan Raya No. 123,
               <br />
               Kawasan Industri, Indonesia
             </p>
           </div>
         </div>
-        <div className="text-center text-[10px] opacity-70 font-sans" >
+        <div className="text-center text-xs opacity-70 font-sans">
           &copy; {currentYear} PT. Agung Sukses Farm Fresh. All rights reserved.
         </div>
       </section>

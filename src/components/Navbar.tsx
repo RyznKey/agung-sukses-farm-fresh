@@ -13,7 +13,7 @@ export default function Header() {
     { name: 'CONTACT US', path: '/contact' },
   ];
   return (
-    <header className="bg-brand-red text-white py-4 px-10 flex justify-between items-center relative z-50">
+    <header className="bg-brand-red text-white py-4 md:py-6 px-4 md:px-10 flex justify-between items-center relative z-50">
       {/* Kiri: Nomor Telepon[cite: 5] */}
       <div className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
         <Phone size={16} />
