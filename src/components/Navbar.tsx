@@ -1,50 +1,68 @@
-"use client"
-import Link from 'next/link';
-import { Phone } from 'lucide-react';
-import { ImageFallback } from '@/lib/ImageFallback';
+"use client";
+import Link from "next/link";
+import { Menu, X, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
   const navLinks = [
-    { name: 'HOME', path: '/' },
-    { name: 'OUR PRODUCTS', path: '/products' },
-    { name: 'LOGISTICS', path: '/logistics' },
-    { name: 'GALLERY', path: '/gallery' },
-    { name: 'ABOUT US', path: '/about' },
-    { name: 'CONTACT US', path: '/contact' },
+    { name: "HOME", path: "/" },
+    { name: "OUR PRODUCTS", path: "/products" },
+    // { name: "LOGISTICS", path: "/logistics" },
+    // { name: "GALLERY", path: "/gallery" },
+    { name: "ABOUT US", path: "/about" },
+    { name: "CONTACT US", path: "/contact" },
   ];
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="bg-brand-red text-white py-4 md:py-6 px-4 md:px-10 flex justify-between items-center relative z-50">
-      {/* Kiri: Nomor Telepon[cite: 5] */}
-      <div className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
-        <Phone size={16} />
-        <span className="font-semibold text-sm tracking-wide">+65 11 4849-3550</span>
+    <header className="absolute inset-x-0 top-0 z-50 w-full bg-[#E60000] text-white">
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center text-brand-dark text-[10px] sm:text-xs font-bold shadow-inner">
+        <img src="/images/logo.webp" alt="logo" srcSet="/images/logo.webp"  className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex items-center justify-center text-brand-dark text-[10px] sm:text-xs font-bold shadow-inner"/>
       </div>
-
-      {/* Tengah: Logo Melengkung[cite: 5] */}
-      <div className="absolute left-1/4 top-0 -translate-x-1/2 bg-white rounded-b-[40px] shadow-lg w-28 h-24 flex items-end justify-center pb-4 z-50 transition-transform hover:-translate-y-1">
-        <div className="w-17 h-17 bg-gray-200 rounded-full flex items-center justify-center text-brand-dark text-xs font-bold">
-          <ImageFallback src="/images/logo.webp" alt="logo agung sukses farm fresh" srcSet="/images/logo.webp, /images/logo.png" onError={(e) => { e.currentTarget.src = '/images/logo.png'; }} />
-        </div>
-
-      </div>
-
-      {/* Kanan: Menu Navigasi[cite: 5] */}
-      <nav className="flex items-center gap-6 text-[11px] font-bold uppercase tracking-widest">
-
+      {/* Desktop Navigation */}
+      <nav className="hidden lg:flex items-center gap-5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest ml-auto">
         {navLinks.map((link) => (
-          <li key={link.name} className="relative group list-none">
-            <Link href={link.path} className="hover:text-black transition-colors">
-              {link.name}
-            </Link>
-            {/* Animasi Garis Bawah (UX) */}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-farm-yellow transition-all duration-300 group-hover:w-full"></span>
-          </li>
+          <Link
+            key={link.path}
+            href={link.path}
+            className="hover:text-black transition-colors"
+          >
+            {link.name}
+          </Link>
         ))}
-
-        <button className="bg-white text-brand-red px-5 py-2.5 rounded-full font-bold hover:bg-black hover:text-white transition-all shadow-md ml-2">
-          Request A Quote
+        <button className="bg-white text-[#E60000] px-4 py-2 rounded-sm font-bold hover:bg-black hover:text-white transition-all shadow-md ml-2 flex items-center gap-1.5">
+          Request a Quote <ChevronRight size={14} />
         </button>
       </nav>
+
+      {/* Mobile Hamburger Toggle Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden p-2 text-white hover:bg-black/20 rounded-lg transition-colors ml-auto"
+        aria-label="Toggle Navigation Menu"
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Mobile Drawer Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute inset-x-4 top-full mt-3 rounded-xl border border-white/20 bg-[#E60000] px-6 py-4 text-white shadow-2xl z-40 animate-fade-in-up flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              href={link.path}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="py-2 border-b border-white/10 font-bold text-sm"
+            >
+              {link.name}
+            </Link>
+          ))}
+          <button className="bg-white text-[#E60000] py-3 rounded-md font-bold text-center mt-2 shadow-md flex items-center justify-center gap-2">
+            Request a Quote <ChevronRight size={16} />
+          </button>
+        </div>
+      )}
+      </div>
     </header>
   );
 }

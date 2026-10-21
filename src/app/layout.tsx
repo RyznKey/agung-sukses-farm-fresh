@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/Navbar';
-import LogisticsFooter from '@/components/LogisticsFooter';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const serif = Merriweather({ weight: ['400', '700', '900'], subsets: ["latin"], variable: '--font-serif' });
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <NavBar />
         {children}
         {/* Footer component diletakkan di sini */}
-        <LogisticsFooter />
+        <Footer />
       </body>
     </html>
   );

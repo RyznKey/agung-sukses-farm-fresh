@@ -1,5 +1,6 @@
 {
   "company": {
+    "logo" : "/images/logo.webp",
     "name": "Agung Sukses Farm Fresh",
     "address": "Jl. Peternakan No. 123, Jawa Barat, Indonesia",
     "phone": "(021) 555-7890",
@@ -9,27 +10,111 @@
   "products": [
     {
       "id": 1,
-      "name": "Ayam Segar",
-      "description": "Ayam segar peternakan, dipelihara dengan pakan alami untuk nutrisi dan rasa terbaik.",
-      "image": "/images/fresh-chicken.jpg"
+      "nameEn": "Whole Chicken",
+      "nameId": "Ayam Utuh",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 38000,
+      "unit": "ekor"
     },
     {
       "id": 2,
-      "name": "Telur Segar",
-      "description": "Telur berkualitas tinggi, kaya protein dari ayam yang sehat dan bahagia.",
-      "image": "/images/eggs.jpg"
+      "nameEn": "Chicken Breast",
+      "nameId": "Dada Ayam",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 45000,
+      "unit": "kg"
     },
     {
       "id": 3,
-      "name": "Daging Ayam",
-      "description": "Daging ayam yang empuk, higienis, dan diproses segar untuk keluarga Anda.",
-      "image": "/images/chicken-meat.jpg"
+      "nameEn": "Chicken Wings",
+      "nameId": "Sayap Ayam",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 36000,
+      "unit": "kg"
     },
     {
       "id": 4,
-      "name": "Anak Ayam (DOC)",
-      "description": "Anak ayam usia sehari yang sehat untuk awal yang baik bagi peternakan Anda.",
-      "image": "/images/chicks.jpg"
+      "nameEn": "Chicken Thighs",
+      "nameId": "Paha Ayam",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 42000,
+      "unit": "kg"
+    },
+    {
+      "id": 5,
+      "nameEn": "Boneless Chicken",
+      "nameId": "Ayam Tanpa Tulang",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 52000,
+      "unit": "kg"
+    },
+    {
+      "id": 6,
+      "nameEn": "Chicken Gizzard",
+      "nameId": "Ampela/Ati Ayam",
+      "category": "chicken",
+      "image": "/images/rawChickenPlateV1.webp",
+      "price": 28000,
+      "unit": "kg"
+    },
+    {
+      "id": 7,
+      "nameEn": "Whole Catfish",
+      "nameId": "Lele Utuh Segar",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 26000,
+      "unit": "kg"
+    },
+    {
+      "id": 8,
+      "nameEn": "Catfish Fillet",
+      "nameId": "Fillet Lele",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 48000,
+      "unit": "kg"
+    },
+    {
+      "id": 9,
+      "nameEn": "Marinated Catfish",
+      "nameId": "Lele Bumbu/Marinate",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 32000,
+      "unit": "pack"
+    },
+    {
+      "id": 10,
+      "nameEn": "Cut Catfish",
+      "nameId": "Lele Potong",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 28000,
+      "unit": "kg"
+    },
+    {
+      "id": 11,
+      "nameEn": "Smoked Catfish",
+      "nameId": "Lele Asap",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 55000,
+      "unit": "pack"
+    },
+    {
+      "id": 12,
+      "nameEn": "Frozen Catfish",
+      "nameId": "Lele Beku",
+      "category": "catfish",
+      "image": "/images/leleV2.webp",
+      "price": 25000,
+      "unit": "kg"
     }
   ],
   "testimonials": [
@@ -53,6 +138,32 @@
       "location": "Surabaya",
       "quote": "Ayam yang sehat, lingkungan bersih, dan pelayanan pelanggan yang luar biasa! Sangat direkomendasikan.",
       "rating": 5
+    }
+  ],
+  "heroSlides": [
+    {
+      "title1": "Think Quality?",
+      "title2": "Think Chicken & Catfish.",
+      "image": "/images/chicken.webp",
+      "alt": "Raw Chicken and Catfish"
+    },
+    {
+      "title1": "Fresh Harvest?",
+      "title2": "Direct From Farms & Ponds.",
+      "image": "/images/chicken-catfish-board.png",
+      "alt": "Farm Fresh Supply"
+    },
+    {
+      "title1": "Wholesale Price?",
+      "title2": "Best Market Rate & Fast Delivery.",
+      "image": "/images/chicken-catfish-board.png",
+      "alt": "Wholesale Value"
+    },
+    {
+      "title1": "Strict Hygiene?",
+      "title2": "100% Halal Certified & Cold Chain.",
+      "image": "/images/chicken-catfish-board.png",
+      "alt": "Quality Guarantee"
     }
   ]
 }
