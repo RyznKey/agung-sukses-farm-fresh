@@ -133,7 +133,7 @@ export default function LogisticsFooter() {
               <span className="text-[9px] uppercase opacity-70 block mb-0.5">
                 Telephone:
               </span>
-              <p className="text-xs font-bold">+87 1-4844-2520</p>
+              <p className="text-xs font-bold">+62 </p>
             </div>
 
             <div className="mb-3 sm:mb-4">
@@ -141,9 +141,8 @@ export default function LogisticsFooter() {
                 Address:
               </span>
               <p className="text-xs sm:text-[11px] leading-tight">
-                City Corporate Offices
                 <br />
-                Ave. 990 Mountain Rd North, TN 33494-733M
+                Dusun IV, Pliken, Kec. Kembaran, Kabupaten Banyumas, Jawa Tengah 53182
               </p>
             </div>
 
@@ -152,7 +151,7 @@ export default function LogisticsFooter() {
                 Email:
               </span>
               <p className="text-xs sm:text-[11px] underline">
-                enquiries@wholesalemeat.com
+                agungsuksesfarm@gmail.com
               </p>
             </div>
           </div>

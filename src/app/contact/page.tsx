@@ -13,7 +13,7 @@ export default function ContactPage() {
   });
 
   // Nomor WhatsApp tujuan bisnis
-  const targetWhatsappNumber = "6281123456789";
+  const targetWhatsappNumber = "62895384238116";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -102,7 +102,7 @@ Mohon tanggapannya. Terima kasih!`;
                   </div>
                   <div>
                     <h3 className="font-extrabold text-gray-900 text-lg sm:text-xl leading-tight">
-                      +62 811-2345-6789
+                      +62 
                     </h3>
                     <p className="text-gray-500 text-xs sm:text-sm font-medium mt-0.5">
                       Hubungi kami via chat atau telepon
@@ -117,7 +117,7 @@ Mohon tanggapannya. Terima kasih!`;
                   </div>
                   <div>
                     <h3 className="font-extrabold text-gray-900 text-lg sm:text-xl leading-tight">
-                      info@ayandaleleterbaik.com
+                      agungsuksesfarm@gmail.com
                     </h3>
                     <p className="text-gray-500 text-xs sm:text-sm font-medium mt-0.5">
                       Kirimkan pertanyaan Anda
@@ -132,9 +132,9 @@ Mohon tanggapannya. Terima kasih!`;
                   </div>
                   <div>
                     <h3 className="font-extrabold text-gray-900 text-base sm:text-lg leading-tight">
-                      Jl. Raya Industri No. 45, Jakarta, Indonesia
+                      Dusun IV, Pliken, Kec. Kembaran, Kabupaten Banyumas, Jawa Tengah 53182
                     </h3>
-                    <p className="text-gray-500 text-xs sm:text-sm font-medium mt-0.5">
+                    <p className="text-gray-500 text-xs sm:text-sm ont-medium mt-0.5">
                       Kunjungi kantor & gudang kami
                     </p>
                   </div>

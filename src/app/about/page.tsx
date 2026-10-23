@@ -19,25 +19,25 @@ export default function AboutPage() {
   // Data Sejarah & Jejak Langkah Kami
   const timelineData = [
     {
-      year: "2015",
+      year: "2024",
       title: "Awal Mula",
       desc: "Perusahaan didirikan sebagai peternakan ayam potong skala kecil yang fokus pada kualitas.",
       icon: <Store size={22} className="text-white" />
     },
+    // {
+    //   year: "2018",
+    //   title: "Ekspansi Pasar",
+    //   desc: "Mulai menyuplai ke berbagai pasar tradisional, restoran, dan industri kuliner skala menengah.",
+    //   icon: <Users size={22} className="text-white" />
+    // },
+    // {
+    //   year: "2021",
+    //   title: "Budidaya Lele",
+    //   desc: "Memperluas bisnis dengan membuka fasilitas budidaya ikan lele modern dan higienis.",
+    //   icon: <Fish size={22} className="text-white" />
+    // },
     {
-      year: "2018",
-      title: "Ekspansi Pasar",
-      desc: "Mulai menyuplai ke berbagai pasar tradisional, restoran, dan industri kuliner skala menengah.",
-      icon: <Users size={22} className="text-white" />
-    },
-    {
-      year: "2021",
-      title: "Budidaya Lele",
-      desc: "Memperluas bisnis dengan membuka fasilitas budidaya ikan lele modern dan higienis.",
-      icon: <Fish size={22} className="text-white" />
-    },
-    {
-      year: "2024",
+      year: "2025",
       title: "Go Digital & Distribusi Luas",
       desc: "Mengadopsi teknologi distribusi modern untuk menjangkau pelanggan lebih luas secara online dan offline.",
       icon: <Globe size={22} className="text-white" />
@@ -233,11 +233,11 @@ export default function AboutPage() {
       </section>
 
       {/* ================= 5. TIM KAMI & DEDIKASI SECTION ================= */}
-      <section className="bg-[#111111] text-white py-20 px-6 sm:px-12 lg:px-20 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      {/* <section className="bg-[#111111] text-white py-20 px-6 sm:px-12 lg:px-20 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12"> */}
           
           {/* Teks Kiri */}
-          <div className="w-full lg:w-1/3 text-center lg:text-left">
+          {/* <div className="w-full lg:w-1/3 text-center lg:text-left">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 uppercase leading-none">
               Tim Kami <br />
               <span className="text-[#E60000]">& Dedikasi</span>
@@ -245,10 +245,10 @@ export default function AboutPage() {
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Yang hangat, menuntun perusahaan pada penelitian kemajuan kawasan dedikasi untuk tumbuh bersama us!
             </p>
-          </div>
+          </div> */}
 
           {/* Foto Anggota Tim Kanan */}
-          <div className="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          {/* <div className="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-6">
             {teamData.map((member, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-[#E60000] shadow-2xl mb-4 group-hover:scale-105 transition-transform">
@@ -258,10 +258,10 @@ export default function AboutPage() {
                 <p className="text-[11px] text-gray-400">{member.role}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
 
     </main>
   );
