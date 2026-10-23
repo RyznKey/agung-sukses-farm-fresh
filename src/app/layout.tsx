@@ -4,6 +4,7 @@ import { Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import logo from './LOGO.png'
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const serif = Merriweather({ weight: ['400', '700', '900'], subsets: ["latin"], variable: '--font-serif' });
@@ -21,6 +22,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Agung Sukses Farm Fresh",
   description: "Raised with Care, Delivered with Quality",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
