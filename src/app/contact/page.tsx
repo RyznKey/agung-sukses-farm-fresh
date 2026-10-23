@@ -102,7 +102,7 @@ Mohon tanggapannya. Terima kasih!`;
                   </div>
                   <div>
                     <h3 className="font-extrabold text-gray-900 text-lg sm:text-xl leading-tight">
-                      +62 
+                      +62 818-0482-3455
                     </h3>
                     <p className="text-gray-500 text-xs sm:text-sm font-medium mt-0.5">
                       Hubungi kami via chat atau telepon

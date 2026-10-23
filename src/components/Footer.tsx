@@ -134,7 +134,7 @@ export default function LogisticsFooter() {
             <span className="text-[9px] uppercase opacity-70 block mb-0.5">
               Telephone:
             </span>
-            <p className="text-xs font-bold">+62 33 </p>
+            <p className="text-xs font-bold">+62 818-0482-3455 </p>
           </div>
 
           <div className="mb-3 sm:mb-4">
