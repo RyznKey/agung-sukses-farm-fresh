@@ -47,7 +47,7 @@ export default function LogisticsFooter() {
             <p className="text-[9px] opacity-60">
               {/* © {new Date().getFullYear()} COMPANY NAME INC. All Rights
               Reserved. */}
-              ©2026 COMPANY NAME INC. All Rights Reserved.
+              ©2026 AGUNG SUKSES FARM FRESH. All Rights Reserved.
             </p>
           </div>
 
