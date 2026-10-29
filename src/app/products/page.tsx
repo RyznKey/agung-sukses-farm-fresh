@@ -36,7 +36,7 @@ export default function ProductsPage() {
   });
 
   // UBAH NOMOR DI SINI (Gunakan kode negara, contoh 6281234567890)
-  const whatsappNumber = "62895384238116";
+  const whatsappNumber = "6281804823455";
 
   const addToCart = (product: Product) => {
     setCart(prevCart => {
@@ -124,20 +124,20 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
       
       {/* Toast Notification */}
       {addedNotice && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#E60000] text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-bounce">
+        <div className="fixed bottom-6 right-6 z-50 bg-primary text-cream px-5 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-bounce border border-cream/30">
           <Check size={18} />
           <span className="text-sm font-bold">{addedNotice} ditambahkan ke pesanan!</span>
         </div>
       )}
 
       {/* HEADER SECTION */}
-      <header className="relative bg-[#18191D] pt-12 pb-16 px-4 sm:px-10 text-center border-b border-gray-800">
+      <header className="relative bg-secondary pt-12 pb-16 px-4 sm:px-10 text-center border-b border-cream/20">
         <div className="max-w-4xl mx-auto relative z-10">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-white mb-6 transition-colors">
+          <Link href="/" className="inline-flex items-center gap-2 text-xs font-bold text-cream/70 hover:text-cream mb-6 transition-colors">
             <ArrowLeft size={16} /> Kembali ke Halaman Utama
           </Link>
-          <h1 className="text-5xl sm:text-7xl font-script text-[#E60000] drop-shadow-lg mb-2">Our Products</h1>
-          <p className="text-gray-300 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+          <h1 className="text-5xl sm:text-7xl font-script text-cream drop-shadow-lg mb-2">Our Products</h1>
+          <p className="text-cream/90 text-xs sm:text-sm font-semibold tracking-wider uppercase">
             High-Quality Poultry & Fresh Catfish for Your Every Need
           </p>
         </div>
@@ -147,7 +147,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
         
         {/* CHICKEN SECTION */}
         <section className="mb-16">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white text-brand-dark p-6 rounded-2xl shadow-xl mb-8 border-l-8 border-[#E60000]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white text-secondary p-6 rounded-2xl shadow-xl mb-8 border-l-8 border-primary">
             <div>
               <div className="flex items-center gap-3">
                 <span className="text-3xl">🐔</span>
@@ -156,9 +156,9 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
               <p className="text-sm text-gray-600 font-semibold ml-10">Ayam Potong</p>
             </div>
             <div className="flex items-center gap-3">
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">100% Halal</span>
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Fresh Daily</span>
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Hygienic Process</span>
+              <span className="bg-primary text-cream text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">100% Halal</span>
+              <span className="bg-primary text-cream text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Fresh Daily</span>
+              <span className="bg-primary text-cream text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Hygienic Process</span>
             </div>
           </div>
 
@@ -169,50 +169,12 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                   <img src={product.image} alt={product.nameEn} className="w-28 h-28 object-contain mb-3 group-hover:scale-105 transition-transform" />
                   <h3 className="font-bold text-gray-900 text-xs text-center leading-tight">{product.nameEn}</h3>
                   <p className="text-[10px] text-gray-500 text-center">{product.nameId}</p>
-                  <span className="text-xs font-black text-[#E60000] mt-2">Rp {product.price.toLocaleString('id-ID')}/{product.unit}</span>
+                  <span className="text-xs font-black text-primary mt-2">Rp {product.price.toLocaleString('id-ID')}/{product.unit}</span>
                 </div>
                 <button
                   type="button"
                   onClick={() => addToCart(product)}
-                  className="w-full bg-[#E60000] hover:bg-red-800 text-white py-2 text-xs font-bold transition-colors flex items-center justify-center gap-1 cursor-pointer"
-                >
-                  <ShoppingCart size={12} /> Tambah Ke Pesanan
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CATFISH SECTION */}
-        <section className="mb-20">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#18191D] text-white p-6 rounded-2xl shadow-xl mb-8 border-l-8 border-[#E60000] border border-gray-800">
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">🐟</span>
-                <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">FRESH CATFISH</h2>
-              </div>
-              <p className="text-sm text-gray-400 font-semibold ml-10">Ikan Lele</p>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">100% Halal</span>
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Fresh Daily</span>
-              <span className="bg-[#E60000] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md">Hygienic Process</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {products.filter(p => p.category === 'catfish').map(product => (
-              <div key={product.id} className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
-                <div className="p-4 flex flex-col items-center">
-                  <img src={product.image} alt={product.nameEn} className="w-28 h-28 object-contain mb-3 group-hover:scale-105 transition-transform" />
-                  <h3 className="font-bold text-gray-900 text-xs text-center leading-tight">{product.nameEn}</h3>
-                  <p className="text-[10px] text-gray-500 text-center">{product.nameId}</p>
-                  <span className="text-xs font-black text-[#E60000] mt-2">Rp {product.price.toLocaleString('id-ID')}/{product.unit}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => addToCart(product)}
-                  className="w-full bg-[#E60000] hover:bg-red-800 text-white py-2 text-xs font-bold transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                  className="w-full bg-primary hover:bg-primary-hover text-cream py-2 text-xs font-bold transition-colors flex items-center justify-center gap-1 cursor-pointer"
                 >
                   <ShoppingCart size={12} /> Tambah Ke Pesanan
                 </button>
@@ -222,18 +184,18 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
         </section>
 
         {/* FORM HALAMAN PEMESANAN */}
-        <section id="order-form" className="bg-white text-gray-900 rounded-3xl p-6 sm:p-10 shadow-2xl border-4 border-[#E60000]">
+        <section id="order-form" className="bg-white text-gray-900 rounded-3xl p-6 sm:p-10 shadow-2xl border-4 border-primary">
           <div className="border-b border-gray-200 pb-6 mb-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h2 className="text-3xl font-black text-gray-900 flex items-center justify-center sm:justify-start gap-3">
-                <FileText className="text-[#E60000]" size={32} />
+                <FileText className="text-primary" size={32} />
                 Form Pemesanan Produk
               </h2>
               <p className="text-xs sm:text-sm text-gray-500 mt-1">
                 Lengkapi data di bawah ini untuk langsung terhubung dan mengirimkan pesanan ke WhatsApp mitra.
               </p>
             </div>
-            <div className="bg-red-50 text-[#E60000] px-4 py-2 rounded-xl text-xs font-bold border border-red-100">
+            <div className="bg-cream/40 text-primary px-4 py-2 rounded-xl text-xs font-bold border border-cream">
               Total Dipilih: {cart.reduce((sum, item) => sum + item.quantity, 0)} Item
             </div>
           </div>
@@ -244,7 +206,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
             <div className="lg:col-span-5 bg-gray-50 p-6 rounded-2xl border border-gray-200 flex flex-col justify-between">
               <div>
                 <h3 className="font-bold text-base text-gray-900 mb-4 flex items-center gap-2">
-                  <ShoppingCart size={18} className="text-[#E60000]" />
+                  <ShoppingCart size={18} className="text-primary" />
                   Ringkasan Pesanan Anda
                 </h3>
 
@@ -269,8 +231,8 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                           </div>
                         </div>
                         <div className="text-right">
-                          <span className="font-bold text-xs text-[#E60000]">Rp {(item.product.price * item.quantity).toLocaleString('id-ID')}</span>
-                          <button type="button" onClick={() => removeFromCart(item.product.id)} className="block text-gray-400 hover:text-red-600 mt-1 ml-auto cursor-pointer">
+                          <span className="font-bold text-xs text-primary">Rp {(item.product.price * item.quantity).toLocaleString('id-ID')}</span>
+                          <button type="button" onClick={() => removeFromCart(item.product.id)} className="block text-gray-400 hover:text-primary mt-1 ml-auto cursor-pointer">
                             <Trash2 size={14} />
                           </button>
                         </div>
@@ -283,7 +245,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
               <div className="pt-6 border-t border-gray-200 mt-6">
                 <div className="flex justify-between items-center text-gray-900">
                   <span className="font-bold text-sm">Total Estimasi:</span>
-                  <span className="text-xl font-black text-[#E60000]">Rp {totalAmount.toLocaleString('id-ID')}</span>
+                  <span className="text-xl font-black text-primary">Rp {totalAmount.toLocaleString('id-ID')}</span>
                 </div>
               </div>
             </div>
@@ -292,7 +254,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
             <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
               <div className="space-y-4">
                 <h3 className="font-bold text-base text-gray-900 flex items-center gap-2 mb-2">
-                  <User size={18} className="text-[#E60000]" />
+                  <User size={18} className="text-primary" />
                   Data Pemesan & Alamat Pengiriman
                 </h3>
 
@@ -305,7 +267,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                       placeholder="Contoh: Budi Santoso"
                       value={customerInfo.name}
                       onChange={e => setCustomerInfo({...customerInfo, name: e.target.value})}
-                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#E60000] focus:outline-none bg-gray-50"
+                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50"
                     />
                   </div>
                   <div>
@@ -316,7 +278,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                       placeholder="Contoh: 081234567890"
                       value={customerInfo.phone}
                       onChange={e => setCustomerInfo({...customerInfo, phone: e.target.value})}
-                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#E60000] focus:outline-none bg-gray-50"
+                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50"
                     />
                   </div>
                 </div>
@@ -329,7 +291,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                     placeholder="Nama Jalan, Nomor Rumah, RT/RW, Kecamatan, Kota"
                     value={customerInfo.address}
                     onChange={e => setCustomerInfo({...customerInfo, address: e.target.value})}
-                    className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#E60000] focus:outline-none bg-gray-50 resize-none"
+                    className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50 resize-none"
                   ></textarea>
                 </div>
 
@@ -339,7 +301,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                     <select
                       value={customerInfo.paymentMethod}
                       onChange={e => setCustomerInfo({...customerInfo, paymentMethod: e.target.value})}
-                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#E60000] focus:outline-none bg-gray-50"
+                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50"
                     >
                       <option value="Transfer Bank (BCA/Mandiri)">Transfer Bank (BCA/Mandiri)</option>
                       <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
@@ -353,7 +315,7 @@ Mohon konfirmasi ketersediaan stok dan rincian ongkos kirim. Terima kasih!`;
                       placeholder="Contoh: Tolong potong ayam jadi 8 bagian"
                       value={customerInfo.notes}
                       onChange={e => setCustomerInfo({...customerInfo, notes: e.target.value})}
-                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-[#E60000] focus:outline-none bg-gray-50"
+                      className="w-full border border-gray-300 rounded-xl p-3 text-xs focus:ring-2 focus:ring-primary focus:outline-none bg-gray-50"
                     />
                   </div>
                 </div>

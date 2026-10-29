@@ -24,18 +24,6 @@ export default function AboutPage() {
       desc: "Perusahaan didirikan sebagai peternakan ayam potong skala kecil yang fokus pada kualitas.",
       icon: <Store size={22} className="text-white" />
     },
-    // {
-    //   year: "2018",
-    //   title: "Ekspansi Pasar",
-    //   desc: "Mulai menyuplai ke berbagai pasar tradisional, restoran, dan industri kuliner skala menengah.",
-    //   icon: <Users size={22} className="text-white" />
-    // },
-    // {
-    //   year: "2021",
-    //   title: "Budidaya Lele",
-    //   desc: "Memperluas bisnis dengan membuka fasilitas budidaya ikan lele modern dan higienis.",
-    //   icon: <Fish size={22} className="text-white" />
-    // },
     {
       year: "2025",
       title: "Go Digital & Distribusi Luas",
@@ -49,22 +37,22 @@ export default function AboutPage() {
     {
       title: "Kualitas Terbaik",
       desc: "Hanya menyediakan ayam dan lele yang sehat, segar, dan diproses dengan standar ketat.",
-      icon: <ThumbsUp size={32} className="text-[#E60000]" />
+      icon: <ThumbsUp size={32} className="text-primary" />
     },
     {
       title: "Higienis & Halal",
       desc: "Seluruh proses dari kandang/kolam hingga ke tangan konsumen dijamin bersih, higienis, dan 100% halal.",
-      icon: <ShieldCheck size={32} className="text-[#E60000]" />
+      icon: <ShieldCheck size={32} className="text-primary" />
     },
     {
       title: "Mitra Terpercaya",
       desc: "Membangun hubungan yang erat dan jujur dengan para pelanggan, mitra, dan peternak lokal.",
-      icon: <Handshake size={32} className="text-[#E60000]" />
+      icon: <Handshake size={32} className="text-primary" />
     },
     {
       title: "Inovasi & Keberlanjutan",
       desc: "Menggunakan metode peternakan dan budidaya yang ramah lingkungan serta adaptif terhadap teknologi.",
-      icon: <Lightbulb size={32} className="text-[#E60000]" />
+      icon: <Lightbulb size={32} className="text-primary" />
     }
   ];
 
@@ -97,24 +85,24 @@ export default function AboutPage() {
       
       {/* Tombol Navigasi Kembali */}
       <div className="absolute top-6 left-6 z-30">
-        <Link href="/" className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-[#E60000] text-white px-4 py-2 rounded-full border border-white/20 transition-all backdrop-blur-sm">
+        <Link href="/" className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-primary text-cream px-4 py-2 rounded-full border border-cream/20 transition-all backdrop-blur-sm">
           <ArrowLeft size={16} /> Kembali ke Halaman Utama
         </Link>
       </div>
 
       {/* ================= 1. HERO / TENTANG KAMI SECTION ================= */}
-      <section className="relative bg-[#111111] pt-20 pb-28 px-6 sm:px-12 lg:px-20 overflow-hidden border-b-8 border-[#E60000]">
+      <section className="relative bg-secondary pt-20 pb-28 px-6 sm:px-12 lg:px-20 overflow-hidden border-b-8 border-primary">
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
           {/* Teks Kiri */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-5xl sm:text-7xl font-script text-white drop-shadow-lg mb-4">
+            <h1 className="text-5xl sm:text-7xl font-script text-cream drop-shadow-lg mb-4">
               Tentang Kami
             </h1>
             <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 leading-snug">
               Cerita & Dedikasi Kami untuk Menyediakan Ayam & Lele Terbaik
             </h2>
-            <p className="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto lg:mx-0 opacity-90">
+            <p className="text-cream/80 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto lg:mx-0 opacity-90">
               Sejarah singkat perusahaan yang lahir dari dedikasi untuk ayam dan lele dari perusahaan untuk memenuhi kebutuhan pangan masyarakat dengan produk segar dan higienis.
             </p>
           </div>
@@ -135,20 +123,20 @@ export default function AboutPage() {
       {/* ================= 2. SEJARAH & JEJAK LANGKAH KAMI SECTION ================= */}
       <section className="bg-white text-gray-900 py-20 px-6 sm:px-12 lg:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 text-center lg:text-left mb-16 uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-secondary text-center lg:text-left mb-16 uppercase tracking-tight">
             Sejarah & Jejak Langkah Kami
           </h2>
 
           {/* Timeline Grid */}
           <div className="relative">
             {/* Garis Horizontal Penghubung (Desktop) */}
-            <div className="hidden lg:block absolute top-6 left-12 right-12 h-1 bg-red-200 -z-0"></div>
+            <div className="hidden lg:block absolute top-6 left-12 right-12 h-1 bg-primary/20 -z-0"></div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 relative z-10">
               {timelineData.map((item, index) => (
                 <div key={index} className="flex flex-col items-center lg:items-start text-center lg:text-left group">
-                  {/* Icon Circle Red */}
-                  <div className="w-12 h-12 rounded-full bg-[#E60000] shadow-lg shadow-red-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  {/* Icon Circle Primary */}
+                  <div className="w-12 h-12 rounded-full bg-primary text-cream shadow-lg shadow-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
                   {/* Year & Title */}
@@ -167,35 +155,35 @@ export default function AboutPage() {
       </section>
 
       {/* ================= 3. VISI & MISI KAMI SECTION ================= */}
-      <section className="bg-[#111111] text-white py-20 px-6 sm:px-12 lg:px-20 relative overflow-hidden -skew-y-1">
+      <section className="bg-secondary text-white py-20 px-6 sm:px-12 lg:px-20 relative overflow-hidden -skew-y-1">
         <div className="max-w-7xl mx-auto skew-y-1">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white text-center lg:text-left mb-12 uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-cream text-center lg:text-left mb-12 uppercase tracking-tight">
             Visi & Misi Kami
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* VISI */}
-            <div className="flex items-start gap-6 bg-white/5 p-6 rounded-2xl border border-white/10 shadow-xl">
-              <div className="w-16 h-16 rounded-full bg-[#E60000] flex items-center justify-center shrink-0 shadow-lg">
-                <Eye size={32} className="text-white" />
+            <div className="flex items-start gap-6 bg-white/5 p-6 rounded-2xl border border-cream/20 shadow-xl">
+              <div className="w-16 h-16 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg">
+                <Eye size={32} className="text-cream" />
               </div>
               <div>
-                <h3 className="text-2xl font-black mb-3 text-white">Visi</h3>
-                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                <h3 className="text-2xl font-black mb-3 text-cream">Visi</h3>
+                <p className="text-cream/90 text-xs sm:text-sm leading-relaxed">
                   Menjadi penyedia produk ayam potong dan ikan lele segar terpercaya nomor satu yang mengedepankan kualitas, higienitas, dan keberlanjutan untuk masyarakat luas.
                 </p>
               </div>
             </div>
 
             {/* MISI */}
-            <div className="flex items-start gap-6 bg-white/5 p-6 rounded-2xl border border-white/10 shadow-xl">
-              <div className="w-16 h-16 rounded-full bg-[#E60000] flex items-center justify-center shrink-0 shadow-lg">
-                <Target size={32} className="text-white" />
+            <div className="flex items-start gap-6 bg-white/5 p-6 rounded-2xl border border-cream/20 shadow-xl">
+              <div className="w-16 h-16 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg">
+                <Target size={32} className="text-cream" />
               </div>
               <div>
-                <h3 className="text-2xl font-black mb-3 text-white">Misi</h3>
-                <ul className="text-gray-300 text-xs sm:text-sm space-y-2 list-disc list-inside leading-relaxed">
+                <h3 className="text-2xl font-black mb-3 text-cream">Misi</h3>
+                <ul className="text-cream/90 text-xs sm:text-sm space-y-2 list-disc list-inside leading-relaxed">
                   <li>Menerapkan standar peternakan dan budidaya yang higienis.</li>
                   <li>Memberikan pelayanan terbaik dengan pengiriman cepat.</li>
                   <li>Mendukung keberlanjutan pangan lokal dan bermitra dengan peternak lokal.</li>
@@ -210,7 +198,7 @@ export default function AboutPage() {
       {/* ================= 4. NILAI-NILAI UTAMA KAMI SECTION ================= */}
       <section className="bg-white text-gray-900 py-20 px-6 sm:px-12 lg:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-gray-900 text-center lg:text-left mb-16 uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-secondary text-center lg:text-left mb-16 uppercase tracking-tight">
             Nilai-Nilai Utama Kami
           </h2>
 
@@ -221,7 +209,7 @@ export default function AboutPage() {
                 key={index} 
                 className="bg-white rounded-2xl p-8 border border-gray-100 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center group"
               >
-                <div className="p-4 rounded-full bg-red-50 mb-6 group-hover:bg-[#E60000] group-hover:text-white transition-colors">
+                <div className="p-4 rounded-full bg-cream/40 mb-6 group-hover:bg-primary group-hover:text-cream transition-colors">
                   {item.icon}
                 </div>
                 <h3 className="font-extrabold text-lg text-gray-900 mb-3">{item.title}</h3>
@@ -240,7 +228,7 @@ export default function AboutPage() {
           {/* <div className="w-full lg:w-1/3 text-center lg:text-left">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 uppercase leading-none">
               Tim Kami <br />
-              <span className="text-[#E60000]">& Dedikasi</span>
+              <span className="text-primary">& Dedikasi</span>
             </h2>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Yang hangat, menuntun perusahaan pada penelitian kemajuan kawasan dedikasi untuk tumbuh bersama us!
@@ -251,7 +239,7 @@ export default function AboutPage() {
           {/* <div className="w-full lg:w-2/3 grid grid-cols-2 sm:grid-cols-4 gap-6">
             {teamData.map((member, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
-                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-[#E60000] shadow-2xl mb-4 group-hover:scale-105 transition-transform">
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-primary shadow-2xl mb-4 group-hover:scale-105 transition-transform">
                   <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-bold text-sm text-white">{member.name}</h3>

@@ -8,10 +8,10 @@ export default function LogisticsFooter() {
     setCurrentYear(new Date().getFullYear());
   }, []);
   return (
-    <div className="relative bg-[#E60000] pt-28 sm:pt-40 pb-8 sm:pb-10 px-4 sm:px-10 mt-16 sm:mt-20">
+    <footer className="relative bg-primary text-white">
       {/* OUR BRANDS (Floating Overlay Container) */}
       {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-[92%] sm:w-[90%] max-w-5xl rounded-[30px] sm:rounded-[50px] py-6 sm:py-8 px-6 sm:px-16 shadow-[0_15px_30px_rgba(0,0,0,0.4)] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 z-20">
-          <h3 className="text-[#E60000] text-3xl sm:text-5xl lg:text-[4.5rem] font-script leading-none md:w-1/3 text-center md:text-left">
+          <h3 className="text-primary text-3xl sm:text-5xl lg:text-[4.5rem] font-script leading-none md:w-1/3 text-center md:text-left">
             Our<br className="hidden md:inline"/><span className="text-2xl sm:text-4xl lg:text-[4rem]"> Brands</span>
           </h3>
           <div className="flex gap-4 sm:gap-8 items-center justify-center md:w-2/3 flex-wrap">
@@ -25,15 +25,15 @@ export default function LogisticsFooter() {
       {/* FOOTER CONTENT */}
       <div
         id="contact"
-        className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-white pt-6 sm:pt-10 border-b border-white/20 pb-8 sm:pb-10"
+        className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-white pt-6 sm:pt-10 border-b border-cream/20 pb-8 sm:pb-10"
       >
         {/* Kolom 1: Logo & Catfish text */}
         <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-          <div className="bg-white rounded-lg p-3 inline-flex items-center gap-2 mb-4 sm:mb-6 shadow-md text-brand-dark">
+          <div className="bg-cream rounded-lg p-3 inline-flex items-center gap-2 mb-4 sm:mb-6 shadow-md text-primary">
             <span className="font-bold text-lg sm:text-xl leading-none">
               🐔
             </span>
-            <span className="font-black text-xs sm:text-sm uppercase tracking-widest border-l-2 border-black pl-2">
+            <span className="font-black text-xs sm:text-sm uppercase tracking-widest border-l-2 border-primary pl-2">
               catfish
               <br />
               <span className="text-[8px]">SUPPLY PARTNER</span>
@@ -158,6 +158,6 @@ export default function LogisticsFooter() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

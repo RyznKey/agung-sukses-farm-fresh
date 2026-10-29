@@ -4,14 +4,63 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  /* Preset Palette dari Gambar: BORDO (#6C151E), GREEN (#0F3D3A), CREAM (#F5DABF) */
+  --color-primary: #6C151E;
+  --color-primary2: #541017;
+  --color-primary3: #871c27;
+  --color-bordo: #6C151E;
+
+  --color-secondary: #0F3D3A;
+  --color-secondary2: #0a2927;
+  --color-secondary-light: #16534f;
+  --color-green: #0F3D3A;
+
+  --color-cream: #F5DABF;
+  --color-cream-light: #fdf6ee;
+  --color-cream-dark: #e8c7a6;
+
+  /* Brand Semantic Utilities */
+  --color-brand-primary: #6C151E;
+  --color-brand-red: #6C151E;
+  --color-brand-bordo: #6C151E;
+  --color-brand-dark: #0F3D3A;
+  --color-brand-green: #0F3D3A;
+  --color-brand-cream: #F5DABF;
+  --color-brand-pink: #F5DABF;
+  --color-brand-gray: #153230;
+}
+
 :root {
-  /* Variabel Warna Utama */
-  --brand-red: #FF0015;
-  --brand-primary : #FF0015;
-  --brand-dark: #1C1D21;
-  --brand-gray: #2C2D32;
-  --brand-pink: #FFF5F5;
-  
+  /* Variabel Preset Warna Utama */
+  --color-primary: #6C151E;   /* BORDO */
+  --color-primary2: #541017;  /* BORDO DARK */
+  --color-primary3: #871c27;  /* BORDO LIGHT */
+  --color-bordo: #6C151E;
+
+  --color-secondary: #0F3D3A;  /* GREEN */
+  --color-secondary2: #0a2927; /* GREEN DARK */
+  --color-secondary-light: #16534f;
+  --color-green: #0F3D3A;
+
+  --color-cream: #F5DABF;      /* CREAM */
+  --color-cream-light: #fdf6ee;
+  --color-cream-dark: #e8c7a6;
+
+  --color-text1: #FFFFFF;
+  --color-text2: #F5DABF;
+  --color-text3: #6C151E;
+
+  /* Variabel Brand (Untuk Kompatibilitas Sistem) */
+  --brand-primary: #6C151E;
+  --brand-red: #6C151E;
+  --brand-bordo: #6C151E;
+  --brand-dark: #0F3D3A;
+  --brand-green: #0F3D3A;
+  --brand-gray: #153230;
+  --brand-pink: #F5DABF;
+  --brand-cream: #F5DABF;
+
   /* Tipografi */
   --font-sans: 'Inter', sans-serif;
   --font-script: 'Pacifico', cursive;
@@ -21,6 +70,7 @@
   html {
     scroll-behavior: smooth;
   }
+
   body {
     background-color: var(--brand-dark);
     color: white;
@@ -30,34 +80,102 @@
 }
 
 @layer utilities {
-  /* Utilitas Warna */
+  /* Utilitas Warna Preset */
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-primary2 { background-color: var(--color-primary2); }
+  .bg-primary3 { background-color: var(--color-primary3); }
+  .bg-secondary { background-color: var(--color-secondary); }
+  .bg-secondary2 { background-color: var(--color-secondary2); }
+  .bg-cream { background-color: var(--color-cream); }
+  .bg-bordo { background-color: var(--color-bordo); }
+  .bg-green { background-color: var(--color-green); }
+
+  .text-primary { color: var(--color-primary); }
+  .text-primary2 { color: var(--color-primary2); }
+  .text-primary3 { color: var(--color-primary3); }
+  .text-secondary { color: var(--color-secondary); }
+  .text-cream { color: var(--color-cream); }
+  .text-bordo { color: var(--color-bordo); }
+  .text-green { color: var(--color-green); }
+
+  .border-primary { border-color: var(--color-primary); }
+  .border-primary2 { border-color: var(--color-primary2); }
+  .border-secondary { border-color: var(--color-secondary); }
+  .border-cream { border-color: var(--color-cream); }
+  .border-bordo { border-color: var(--color-bordo); }
+  .border-green { border-color: var(--color-green); }
+
+  /* Utilitas Brand (Kompatibilitas) */
   .bg-brand-red { background-color: var(--brand-red); }
   .bg-brand-dark { background-color: var(--brand-dark); }
   .bg-brand-pink { background-color: var(--brand-pink); }
-  
+  .bg-brand-cream { background-color: var(--brand-cream); }
+  .bg-brand-green { background-color: var(--brand-green); }
+  .bg-brand-bordo { background-color: var(--brand-bordo); }
+
   .text-brand-red { color: var(--brand-red); }
   .text-brand-dark { color: var(--brand-dark); }
-  
+  .text-brand-cream { color: var(--brand-cream); }
+  .text-brand-green { color: var(--brand-green); }
+  .text-brand-bordo { color: var(--brand-bordo); }
+
+  .border-brand-red { border-color: var(--brand-red); }
+  .border-brand-dark { border-color: var(--brand-dark); }
+  .border-brand-cream { border-color: var(--brand-cream); }
+  .border-brand-green { border-color: var(--brand-green); }
+  .border-brand-bordo { border-color: var(--brand-bordo); }
+
   /* Utilitas Tipografi */
-  .font-script { font-family: var(--font-script); font-weight: normal; }
+  .font-script {
+    font-family: var(--font-script);
+    font-weight: normal;
+  }
 
   /* Animasi Kustom */
-  .animate-float { animation: float 3s ease-in-out infinite; }
-  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-  .animate-slide-in { animation: slideIn 0.5s ease-out forwards; }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  0% { opacity: 0; transform: translateX(-50px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

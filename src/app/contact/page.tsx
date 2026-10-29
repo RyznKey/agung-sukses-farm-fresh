@@ -13,7 +13,7 @@ export default function ContactPage() {
   });
 
   // Nomor WhatsApp tujuan bisnis
-  const targetWhatsappNumber = "62895384238116";
+  const targetWhatsappNumber = "6281804823455";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,20 +56,20 @@ Mohon tanggapannya. Terima kasih!`;
       <div className="absolute top-6 left-6 z-30">
         <Link 
           href="/" 
-          className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-[#E60000] text-white px-4 py-2 rounded-full border border-white/20 transition-all backdrop-blur-sm"
+          className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-primary text-cream px-4 py-2 rounded-full border border-cream/20 transition-all backdrop-blur-sm"
         >
           <ArrowLeft size={16} /> Kembali ke Halaman Utama
         </Link>
       </div>
 
       {/* ================= 1. HERO / BANNER HEADER ================= */}
-      <section className="relative bg-[#111111] pt-20 pb-16 px-6 sm:px-12 text-center overflow-hidden border-b-8 border-[#E60000]">
+      <section className="relative bg-secondary pt-20 pb-16 px-6 sm:px-12 text-center overflow-hidden border-b-8 border-primary">
         <div className="absolute inset-0 opacity-20 bg-[url('/images/dark-texture.png')] bg-cover mix-blend-overlay pointer-events-none"></div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-5xl sm:text-7xl font-script text-white drop-shadow-lg mb-3">
+          <h1 className="text-5xl sm:text-7xl font-script text-cream drop-shadow-lg mb-3">
             Hubungi Kami
           </h1>
-          <p className="text-gray-300 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+          <p className="text-cream/90 text-xs sm:text-sm font-semibold tracking-wider uppercase">
             Kami Siap Melayani Kebutuhan Ayam & Lele Terbaik Anda
           </p>
         </div>
@@ -77,7 +77,7 @@ Mohon tanggapannya. Terima kasih!`;
 
       {/* ================= 2. MAIN CONTENT GRID (Dua Sisi: Kiri Putih & Kanan Merah) ================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-10">
-        <div className="bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border-4 border-[#E60000]">
+        <div className="bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border-4 border-primary">
           
           {/* ================= SISI KIRI: INFORMASI KONTAK & JAM OPERASIONAL ================= */}
           <div className="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between relative bg-white">
@@ -85,9 +85,9 @@ Mohon tanggapannya. Terima kasih!`;
             {/* Header Judul Kiri */}
             <div>
               <div className="flex items-center gap-3 mb-8">
-                {/* Ornamen Merah Kiri */}
-                <div className="w-3 h-10 bg-[#E60000] rounded-full"></div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                {/* Ornamen Primary Kiri */}
+                <div className="w-3 h-10 bg-primary rounded-full"></div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-secondary tracking-tight">
                   Hubungi Kami
                 </h2>
               </div>
@@ -97,7 +97,7 @@ Mohon tanggapannya. Terima kasih!`;
                 
                 {/* Telepon / WA */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E60000] text-white flex items-center justify-center shrink-0 shadow-lg shadow-red-500/30">
+                  <div className="w-12 h-12 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
                     <Phone size={22} />
                   </div>
                   <div>
@@ -112,7 +112,7 @@ Mohon tanggapannya. Terima kasih!`;
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E60000] text-white flex items-center justify-center shrink-0 shadow-lg shadow-red-500/30">
+                  <div className="w-12 h-12 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
                     <Mail size={22} />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ Mohon tanggapannya. Terima kasih!`;
 
                 {/* Alamat Kantor */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E60000] text-white flex items-center justify-center shrink-0 shadow-lg shadow-red-500/30">
+                  <div className="w-12 h-12 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
                     <MapPin size={22} />
                   </div>
                   <div>
@@ -148,12 +148,12 @@ Mohon tanggapannya. Terima kasih!`;
                   Jam Operasional
                 </h3>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#E60000] text-white flex items-center justify-center shrink-0 shadow-lg shadow-red-500/30">
+                  <div className="w-12 h-12 rounded-full bg-primary text-cream flex items-center justify-center shrink-0 shadow-lg shadow-primary/30">
                     <Clock size={22} />
                   </div>
                   <div className="text-gray-800 text-sm font-bold space-y-1 pt-1">
                     <p>Senin - Sabtu: <span className="font-semibold text-gray-600">08.00 - 17.00 WIB</span></p>
-                    <p>Minggu: <span className="text-[#E60000]">Tutup</span></p>
+                    <p>Minggu: <span className="text-primary">Tutup</span></p>
                   </div>
                 </div>
               </div>
@@ -176,14 +176,14 @@ Mohon tanggapannya. Terima kasih!`;
           </div>
 
           {/* ================= SISI KANAN: FORM KIRIM PESAN & MAP LOKASI ================= */}
-          <div className="lg:col-span-6 bg-[#E60000] text-white p-6 sm:p-10 flex flex-col justify-between relative">
+          <div className="lg:col-span-6 bg-primary text-cream p-6 sm:p-10 flex flex-col justify-between relative">
             
             {/* 1. Kirim Pesan Form */}
             <div>
               <div className="flex items-center gap-3 mb-6">
                 {/* Ornamen Elemen Angin / Gelombang */}
-                <div className="text-white text-3xl font-bold">💨</div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <div className="text-cream text-3xl font-bold">💨</div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-cream tracking-tight">
                   Kirim Pesan
                 </h2>
               </div>
@@ -198,7 +198,7 @@ Mohon tanggapannya. Terima kasih!`;
                     placeholder="Nama Lengkap"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-black/30 shadow-md"
+                    className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-cream/40 shadow-md"
                   />
                   <input
                     type="email"
@@ -206,7 +206,7 @@ Mohon tanggapannya. Terima kasih!`;
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-black/30 shadow-md"
+                    className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-cream/40 shadow-md"
                   />
                 </div>
 
@@ -218,7 +218,7 @@ Mohon tanggapannya. Terima kasih!`;
                   placeholder="Nomor WhatsApp"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-black/30 shadow-md"
+                  className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-cream/40 shadow-md"
                 />
 
                 {/* Row 3: Pesan Anda */}
@@ -229,13 +229,13 @@ Mohon tanggapannya. Terima kasih!`;
                   placeholder="Pesan Anda"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-black/30 shadow-md resize-none"
+                  className="w-full bg-white text-gray-900 font-semibold placeholder-gray-400 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-4 focus:ring-cream/40 shadow-md resize-none"
                 ></textarea>
 
                 {/* Tombol Send Message */}
                 <button
                   type="submit"
-                  className="w-full bg-white hover:bg-gray-100 active:scale-95 text-[#E60000] font-black tracking-wider text-base sm:text-lg py-3.5 rounded-full shadow-2xl transition-all flex items-center justify-center gap-2 cursor-pointer uppercase"
+                  className="w-full bg-cream hover:bg-cream-light active:scale-95 text-primary font-black tracking-wider text-base sm:text-lg py-3.5 rounded-full shadow-2xl transition-all flex items-center justify-center gap-2 cursor-pointer uppercase"
                 >
                   <Send size={20} /> SEND MESSAGE
                 </button>
@@ -243,13 +243,13 @@ Mohon tanggapannya. Terima kasih!`;
             </div>
 
             {/* 2. Lokasi Kami (Google Maps Container) */}
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <h3 className="font-extrabold text-white text-2xl mb-4">
+            <div className="mt-8 pt-6 border-t border-cream/20">
+              <h3 className="font-extrabold text-cream text-2xl mb-4">
                 Lokasi Kami
               </h3>
 
               {/* Map Box Component */}
-              <div className="relative w-full h-48 sm:h-56 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl border-2 border-white">
+              <div className="relative w-full h-48 sm:h-56 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl border-2 border-cream/30">
                 
                 {/* Embed Google Maps / Placeholder Map */}
                 <iframe
@@ -261,7 +261,7 @@ Mohon tanggapannya. Terima kasih!`;
                 ></iframe>
 
                 {/* Badge Pin Kantor & Gudang Kami */}
-                <div className="absolute top-3 right-3 bg-[#E60000] text-white px-3 py-1.5 rounded-lg text-xs font-black shadow-lg flex items-center gap-1.5 border border-white">
+                <div className="absolute top-3 right-3 bg-secondary text-cream px-3 py-1.5 rounded-lg text-xs font-black shadow-lg flex items-center gap-1.5 border border-cream/30">
                   <MapPin size={14} /> KANTOR & GUDANG KAMI
                 </div>
 

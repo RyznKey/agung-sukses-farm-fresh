@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className="text-white text-4xl md:text-5xl font-script leading-none drop-shadow-lg mb-2">
             Think chicken?
           </h1>
-          <div className="inline-block bg-brand-red text-white px-8 py-2 rounded-[30px] transform -rotate-3 shadow-xl">
+          <div className="inline-block bg-primary text-cream px-8 py-2 rounded-[30px] transform -rotate-3 shadow-xl">
             <h2 className="text-4xl md:text-5xl font-script leading-none">Think us</h2>
           </div>
         </div>

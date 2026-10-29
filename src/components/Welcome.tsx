@@ -1,11 +1,11 @@
 import { ImageFallback } from '@/lib/ImageFallback';
 export default function Welcome() {
   return (
-    <section className="bg-brand-dark text-white pt-10 pb-32 px-4 sm:px-6 md:px-8 flex justify-center relative z-20 -mb-16">
+    <section className="bg-secondary text-white pt-10 pb-32 px-4 sm:px-6 md:px-8 flex justify-center relative z-20 -mb-16">
       <div className="flex items-center justify-between max-w-6xl w-full">
         {/* Konten Teks[cite: 5] */}
         <div className="w-1/2 pr-16 animate-slide-in">
-          <h3 className="text-brand-red text-[4rem] font-script mb-8 drop-shadow-md">Welcome...</h3>
+          <h3 className="text-cream text-[4rem] font-script mb-8 drop-shadow-md">Welcome...</h3>
           <p className="text-gray-400 text-xs leading-relaxed mb-5 opacity-90">
             Every bit of chicken that leaves our processing plant delivers absolute quality. We are a wide range HALAL CHICKEN supplier to cater to your needs...
           </p>
