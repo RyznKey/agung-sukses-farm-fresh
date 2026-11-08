@@ -1,6 +1,6 @@
 {
   "company": {
-    "logo" : "/images/logo.webp",
+    "logo": "/images/logo.webp",
     "name": "Agung Sukses Farm Fresh",
     "address": "Dusun IV, Pliken, Kec. Kembaran, Kabupaten Banyumas, Jawa Tengah 53182",
     "phone": "+62  ",
@@ -11,38 +11,42 @@
     {
       "id": 1,
       "nameEn": "meat (thigh, breast, wing)",
-      "nameId": "daging (paha, dada, sayap)",
+      "nameId": "Daging (paha, dada, sayap)",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/ayamUtuh.jpg",
       "price": 38000,
-      "unit": "kg"
+      "unit": "kg",
+      "description": "Potongan daging ayam potong segar kualitas prima (kombinasi paha, dada, dan sayap). Bersih, higienis, 100% halal, serta dipotong dan dikemas setiap hari untuk menjaga kesegaran maksimal."
     },
     {
       "id": 2,
       "nameEn": "Skinless breast fillet",
-      "nameId": "Fillet dada tanpa kuli",
+      "nameId": "Fillet dada tanpa kulit",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/dadaFillet.jpg",
       "price": 48000,
-      "unit": "kg"
+      "unit": "kg",
+      "description": "Fillet dada ayam murni tanpa kulit dan tanpa tulang. Tekstur daging padat berserat halus, tinggi protein serta rendah lemak, sangat ideal untuk restoran, katering, dan menu sehat."
     },
     {
       "id": 3,
       "nameEn": "Skinless thigh fillet",
       "nameId": "Fillet paha tanpa kulit",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/dadaFillet.jpg",
       "price": 50000,
-      "unit": "kg"
+      "unit": "kg",
+      "description": "Fillet paha ayam tanpa kulit dan tulang. Daging juicy, lembut, dan gurih, sangat cocok untuk olahan sate ayam, chicken katsu, steak ayam, dan aneka masakan istimewa."
     },
     {
       "id": 4,
       "nameEn": "Chicken liver and gizzard",
       "nameId": "Ati ampela",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/atiAmpela.jpg",
       "price": 2000,
-      "unit": "pcs"
+      "unit": "pcs",
+      "description": "Ati ampela ayam segar yang telah dibersihkan secara teliti dan higienis. Siap diolah untuk sambal goreng ati, sate ampela, bacem, dan aneka masakan tradisional nusantara."
     },
     {
       "id": 5,
@@ -51,25 +55,58 @@
       "category": "chicken",
       "image": "/images/rawChickenPlateV1.webp",
       "price": 1000,
-      "unit": "pcs"
+      "unit": "pcs",
+      "description": "Kepala ayam segar pilihan yang telah dibersihkan. Sangat cocok sebagai bahan pembuat kuah kaldu yang gurih dan sedap untuk masakan sup dan soto."
     },
     {
       "id": 6,
       "nameEn": "Chicken Feet",
       "nameId": "Ceker",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/ceker.jpg",
       "price": 20000,
-      "unit": "kg"
+      "unit": "kg",
+      "description": "Ceker ayam segar kualitas pilihan yang telah dibersihkan kulit arinya secara higienis. Kaya akan kolagen alami, kenyal dan lezat untuk sup ceker, seblak, atau ceker pedas mercon."
     },
     {
       "id": 7,
       "nameEn": "Chicken Bone",
       "nameId": "Tulang",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/tulangAyam.webp",
       "price": 7500,
-      "unit": "kg"
+      "unit": "kg",
+      "description": "Tulang ayam segar pilihan terbaik untuk pembuatan kaldu ayam alami yang kental, wangi, dan kaya nutrisi bagi masakan kuah, bakso, dan mie."
+    },
+    {
+      "id": 8,
+      "nameEn": "Consumption Catfish",
+      "nameId": "Ikan lele konsumsi",
+      "category": "fish",
+      "image": "/images/produk/leleV2.webp",
+      "price": "Coming Soon",
+      "unit": "kg",
+      "description": "Ikan lele konsumsi segar langsung dari kolam budidaya terawat dengan air jernih dan pakan terstandar. Bebas bau lumpur/tanah, daging gurih, padat, dan kaya protein, dengan ukuran seragam siap masak."
+    },
+    {
+      "id": 9,
+      "nameEn": "Village Chicken Day-Old Chicks (DOC)",
+      "nameId": "DOC ayam kampung",
+      "category": "village-chicken",
+      "image": "/images/produk/anakAyam.jpg",
+      "price": "Coming Soon",
+      "unit": "ekor",
+      "description": "Bibit anak ayam kampung (DOC / Day-Old Chicks) super dari indukan unggul. Kondisi sehat, aktif, lincah, berbulu kering bersih, serta telah mendapatkan seleksi ketat dan vaksinasi awal."
+    },
+    {
+      "id": 10,
+      "nameEn": "Village Chicken Eggs",
+      "nameId": "Telur ayam kampung",
+      "category": "eggs",
+      "image": "/images/produk/telor.jpg",
+      "price": "Coming Soon",
+      "unit": "butir",
+      "description": "Telur ayam kampung asli dan segar dari peternakan terawat. Cangkang kokoh bersih, kuning telur berwarna oranye pekat bernutrisi tinggi, sangat cocok untuk konsumsi harian, jamu, dan kesehatan."
     }
   ],
   "testimonials": [
@@ -117,7 +154,7 @@
     {
       "title1": "Strict Hygiene?",
       "title2": "100% Halal Certified & Cold Chain.",
-      "image": "/images/chicken-catfish-board.png",
+      "image": "/images/slideHero/slideHero3.jpeg",
       "alt": "Quality Guarantee"
     }
   ]

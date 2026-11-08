@@ -82,13 +82,6 @@ export default function AboutPage() {
 
   return (
     <main className="w-full min-h-screen bg-[#0F1012] text-white font-sans overflow-x-hidden relative pb-12">
-      
-      {/* Tombol Navigasi Kembali */}
-      <div className="absolute top-6 left-6 z-30">
-        <Link href="/" className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-primary text-cream px-4 py-2 rounded-full border border-cream/20 transition-all backdrop-blur-sm">
-          <ArrowLeft size={16} /> Kembali ke Halaman Utama
-        </Link>
-      </div>
 
       {/* ================= 1. HERO / TENTANG KAMI SECTION ================= */}
       <section className="relative bg-secondary pt-20 pb-28 px-6 sm:px-12 lg:px-20 overflow-hidden border-b-8 border-primary">
@@ -130,7 +123,7 @@ export default function AboutPage() {
           {/* Timeline Grid */}
           <div className="relative">
             {/* Garis Horizontal Penghubung (Desktop) */}
-            <div className="hidden lg:block absolute top-6 left-12 right-12 h-1 bg-primary/20 -z-0"></div>
+            <div className="hidden lg:block absolute top-6 left-12 right-12 h-1 bg-primary/20 z-0"></div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 relative z-10">
               {timelineData.map((item, index) => (

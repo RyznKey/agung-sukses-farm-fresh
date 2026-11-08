@@ -1,9 +1,15 @@
 "use client";
 
+import { Suspense } from 'react';
 import { useState, useEffect } from "react";
 import { ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 import db from "../data/db.json";
 import Link from "next/link";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 
 export default function Home() {
   // State untuk Side Pagination Hero (Aktif)
@@ -13,14 +19,21 @@ export default function Home() {
   const heroSlides = db.heroSlides;
   const currentHeroSlide = heroSlides[activeHeroSlide] ?? heroSlides[0];
 
-  // Tampilkan produk dengan ID 1, 2, 3, 7, 8, dan 9 dari db.json.
+  // Tampilkan produk unggulan (ayam, lele, DOC, telur) dari db.json.
   const wholesaleItems = db.products
-    .filter((product) => [1, 2, 3, 6, 7].includes(product.id))
-    .map((product) => ({
-      ...product,
-      name: product.nameId,
-      sub: `${product.nameEn} • Rp${product.price.toLocaleString("id-ID")}/${product.unit}`,
-    }));
+    .filter((product) => [1, 2, 6, 8, 9, 10].includes(product.id))
+    .map((product) => {
+      const priceText =
+        typeof product.price === "number"
+          ? `Rp${product.price.toLocaleString("id-ID")}/${product.unit || "item"}`
+          : product.price;
+
+      return {
+        ...product,
+        name: product.nameId,
+        sub: `${product.nameEn} • ${priceText}`,
+      };
+    });
   useEffect(() => {
     if (heroSlides.length < 2) return;
 
@@ -35,7 +48,7 @@ export default function Home() {
     <main className="w-full relative bg-brand-dark min-h-screen overflow-x-hidden font-sans">
       {/* ================= HERO SECTION ================= */}
       <section
-        className="relative bg-[#111111] bg-cover bg-center pt-12 sm:pt-20 pb-16 sm:pb-32 px-4 sm:px-10 lg:px-16 flex justify-center min-h-[70vh] lg:min-h-[85vh] border-t-[8px] sm:border-t-[12px] border-brand-dark"
+        className="relative bg-[#111111] bg-cover bg-center py-14 sm:py-20 lg:py-24 px-4 sm:px-10 lg:px-16 flex items-center justify-center min-h-[70svh] lg:min-h-[85svh] border-brand-dark"
         style={{
           backgroundImage: currentHeroSlide
             ? `linear-gradient(rgba(17, 17, 17, 0.55), rgba(17, 17, 17, 0.55)), url('${currentHeroSlide.image}')`
@@ -50,11 +63,10 @@ export default function Home() {
             <button
               key={idx}
               onClick={() => setActiveHeroSlide(idx)}
-              className={`transition-all duration-300 rounded-full ${
-                activeHeroSlide === idx
-                  ? "w-3 h-3 bg-primary scale-125 shadow-[0_0_10px_var(--color-primary)]"
-                  : "w-2.5 h-2.5 bg-cream/40 hover:bg-cream"
-              }`}
+              className={`transition-all duration-300 rounded-full ${activeHeroSlide === idx
+                ? "w-3 h-3 bg-primary scale-125 shadow-[0_0_10px_var(--color-primary)]"
+                : "w-2.5 h-2.5 bg-cream/40 hover:bg-cream"
+                }`}
               title={`Go to slide ${idx + 1}`}
               aria-label={`Go to hero slide ${idx + 1}`}
               aria-current={activeHeroSlide === idx ? "true" : undefined}
@@ -62,14 +74,14 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-6xl mt-4 sm:mt-10">
+        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-6xl">
           {/* Tipografi Hero */}
-          <div className="text-center animate-fade-in-up flex flex-col items-center">
-            <h1 className="text-white text-3xl sm:text-6xl md:text-7xl lg:text-[6rem] font-script leading-none drop-shadow-2xl z-20 mb-2 sm:mb-4">
+          <div className="w-full text-center animate-fade-in-up flex flex-col items-center">
+            <h1 className="w-full text-white text-[clamp(2.5rem,9vw,6rem)] font-script leading-tight drop-shadow-2xl z-20 mb-2 sm:mb-4">
               {currentHeroSlide.title1}
             </h1>
-            <div className="inline-block bg-primary text-cream px-4 sm:px-10 py-1 sm:py-2 rounded-[20px] sm:rounded-[40px] transform -rotate-2 shadow-2xl z-10 my-1 sm:my-0">
-              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-script leading-none">
+            <div className="inline-block max-w-full bg-primary text-cream px-4 sm:px-10 py-2 sm:py-3 rounded-[20px] sm:rounded-[40px] transform -rotate-2 shadow-2xl z-10 my-1 sm:my-0">
+              <h2 className="text-[clamp(1.5rem,7vw,5.5rem)] font-script leading-tight text-center break-words">
                 {currentHeroSlide.title2}
               </h2>
             </div>
@@ -89,10 +101,9 @@ export default function Home() {
               Welcome...
             </h3>
             <p className="text-cream text-xs sm:text-sm font-bold leading-relaxed mb-3 sm:mb-4">
-              Selamat datang di Agung Sukses Farm Fresh - Pemasok grosir premium
-              untuk produk unggas dan makanan laut, baik segar maupun beku.
+              Selamat datang di Agung Sukses Farm Fresh – Pemasok Grosir Produk Peternakan dan Perikanan Berkualitas.
               <br className="hidden sm:inline" />
-              Mitra tepercaya Anda untuk pasokan ayam premium
+              Kami menyediakan berbagai kebutuhan unggas dan perikanan, mulai dari ayam potong segar, DOC (anak ayam), telur ayam kampung, ikan lele konsumsi, hingga pakan ternak, khususnya pakan ayam. Kami berkomitmen menghadirkan produk berkualitas dengan pasokan terpercaya untuk memenuhi kebutuhan pelanggan.
             </p>
             <p className="text-gray-400 text-xs sm:text-[11px] leading-relaxed opacity-80">
               Kami bangga dapat menghadirkan produk dengan kualitas terbaik bagi
@@ -116,113 +127,95 @@ export default function Home() {
 
       {/* ================= ONLINE WHOLESALE SECTION ================= */}
       <section
-        id="products"
-        className="bg-white relative z-10 pt-12 sm:pt-20 pb-20 sm:pb-32 px-4 sm:px-8 lg:px-10 overflow-hidden"
-      >
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 relative z-10">
-          {/* Kiri: Teks & Peta */}
-          <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-4 mb-4 sm:mb-6 mt-4 sm:mt-10">
-              <div className="w-16 h-16 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center shadow-xl border-2 sm:border-4 border-white relative z-10 shrink-0">
-                <img
-                  src="/images/logo.webp"
-                  alt="Chicken Logo"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-              <h2 className="text-3xl sm:text-5xl lg:text-[4.5rem] font-script text-brand-dark leading-[0.9] -ml-2 sm:-ml-6 z-0">
-                Online <br />
-                <span className="text-primary">Wholesale</span>
-              </h2>
-            </div>
+      id="products"
+      className="relative z-10 bg-[#000000] py-14 text-white overflow-hidden sm:py-20 lg:py-24"
+    >
+      <div className="mx-auto max-w-7xl">
+        {/* Header Text */}
+        <div className="mb-8 px-4 text-center sm:mb-12">
+          <p className="mb-3 text-[10px] uppercase tracking-[0.3em] text-stone-400 sm:text-xs">
+            Agung Sukses Farm Fresh
+          </p>
+          <h2 className="mx-auto max-w-2xl font-serif text-3xl font-normal leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Produk pilihan, segar <br className="hidden sm:block" />
+            langsung dari peternakan
+          </h2>
+        </div>
 
-            {/* <div className="bg-secondary text-cream px-4 sm:px-6 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-bold w-fit mb-4 sm:mb-8 shadow-lg">
-              Poultry & Fish Su
-            </div> */}
-
-            <p className="text-gray-600 text-xs sm:text-[11px] mb-3 sm:mb-4 leading-relaxed font-semibold">
-              The finest selection of farm-fresh poultry and premium catfish,
-              sourced locally for guaranteed freshness.
-            </p>
-            <p className="text-gray-500 text-xs sm:text-[10px] mb-6 sm:mb-8 leading-relaxed">
-              We guarantee the best value for your wholesale needs. Fast
-              delivery, strict quality control, and excellent customer service
-              are our top priorities. Order now and get the freshest items
-              straight to your doorstep.
-            </p>
-
-            <Link
-              href="/products"
-              className="bg-primary hover:bg-primary-hover text-cream w-fit px-6 sm:px-8 py-2.5 rounded-full text-xs sm:text-[11px] font-bold shadow-lg transition-colors flex items-center gap-2 mb-8 cursor-pointer"
+        {/* 3D Coverflow Carousel Container */}
+        <div className="relative w-full py-6">
+          <Suspense fallback={<div className="h-[360px] w-full animate-pulse bg-[#121212] rounded-3xl" />}>
+          
+            <Swiper
+              modules={[EffectCoverflow, Autoplay]}
+              effect="coverflow"
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView="auto"
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              coverflowEffect={{
+                rotate: 35,       // Kemiringan rotasi 3D kartu samping
+                stretch: 0,        // Jarak regangan
+                depth: 250,        // Kedalaman perspektif 3D
+                modifier: 1,       // Intensitas efek
+                slideShadows: true, // Bayangan kegelapan pada slide samping
+              }}
+              className="w-full !overflow-visible"
             >
-              View All Products <ChevronRight size={14} />
-            </Link>
-
-            {/* Peta Siluet Hitam */}
-            <img
-              src="/images/black-map-silhouette.png"
-              alt="Map"
-              className="w-full max-w-50 sm:max-w-62.5 opacity-90"
-            />
-          </div>
-
-          {/* Kanan: Grid Produk (Responsive Grid: 1 col on XS, 2 on SM, 3 on LG) */}
-          <div className="w-full lg:w-2/3 flex flex-col">
-            <h3 className="text-center font-script text-2xl sm:text-4xl mb-6 sm:mb-8 text-secondary relative">
-              <span className="bg-white px-4 sm:px-6 relative z-10 text-secondary">
-                Fresh Chicken
-              </span>
-              <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-200 -z-0"></div>
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {wholesaleItems.map((item) => (
-                <div
+                <SwiperSlide
                   key={item.id}
-                  className="group relative flex flex-col justify-end bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition-transform duration-300"
+                  className="!w-[240px] sm:!w-[280px] lg:!w-[300px]"
                 >
-                  {/* Badge Hitam S&K */}
-                  <div className="absolute top-0 right-4 bg-secondary text-cream text-[8px] font-bold px-2 py-2 rounded-b-md z-10 text-center">
-                    S&K
-                    <br />
-                    APPLY
-                  </div>
-                  {/* Gambar Produk */}
-                  <div className="p-4 sm:p-6 flex justify-center items-center h-36 sm:h-40 bg-gray-50 group-hover:bg-cream/10 transition-colors">
+                  <Link
+                    href={`/products/${item.id}`}
+                    aria-label={`${item.name}: ${item.sub}`}
+                    className="group relative flex h-[360px] sm:h-[420px] w-full flex-col justify-end overflow-hidden rounded-3xl bg-[#121212] shadow-2xl transition-transform duration-500"
+                  >
+                    {/* Background Gambar */}
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="h-40 object-contain drop-shadow-md group-hover:scale-110 transition-transform"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                  </div>
-                  {/* Box Bordo (Primary) */}
-                  <div className="bg-primary text-white p-3 text-center min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
-                    <h4 className="font-bold text-xs sm:text-sm tracking-wide text-cream">
-                      {item.name}
-                    </h4>
-                    <p className="text-[9px] sm:text-[10px] text-cream/90 mt-0.5 sm:mt-1 leading-tight">
-                      {item.sub}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            {/* Banner Teks di Bawah Grid */}
-            {/* <div className="mt-8 sm:mt-10 bg-cream/20 border border-cream/50 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm text-center sm:text-left">
-              <div className="w-full sm:w-3/4">
-                <h4 className="text-secondary font-bold text-sm sm:text-lg leading-snug">
-                  Sourcing Directly from Local Poultry Farms and Catfish Ponds
-                  for Guaranteed Freshness.
-                </h4>
-              </div>
-              <button className="bg-primary hover:bg-primary-hover text-cream px-5 py-2.5 rounded-full text-xs sm:text-[10px] font-bold shadow-md whitespace-nowrap w-full sm:w-auto cursor-pointer transition-colors">
-                View All Collections
-              </button>
-            </div> */}
-          </div>
+                    {/* Gradient Overlay Gelap agar teks terbaca murni di atas gambar */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+
+                    {/* Konten Teks di Atas Gambar */}
+                    <div className="relative z-10 p-6 text-center">
+                      <h3 className="font-serif text-xl sm:text-2xl font-medium leading-tight text-white drop-shadow-md">
+                        {item.name}
+                      </h3>
+                      {item.sub && (
+                        <p className="mt-2 text-xs text-stone-300 line-clamp-2">
+                          {item.sub}
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Suspense>
         </div>
-      </section>
+
+        {/* Tombol Lihat Semua Produk */}
+        <div className="mt-8 text-center">
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-2.5 text-xs font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-black"
+          >
+            Lihat Semua Produk <ChevronRight size={14} />
+          </Link>
+        </div>
+      </div>
+    </section>
 
       {/* ================= LOGISTICS SECTION ================= */}
       {/* <section id="logistics" className="bg-[#15161A] text-white py-12 sm:py-24 px-4 sm:px-10 lg:px-16 relative overflow-hidden">

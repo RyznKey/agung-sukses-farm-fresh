@@ -53,14 +53,14 @@ Mohon tanggapannya. Terima kasih!`;
     <main className="w-full min-h-screen bg-[#0F1012] text-white font-sans overflow-x-hidden relative pb-16">
       
       {/* Tombol Kembali ke Beranda */}
-      <div className="absolute top-6 left-6 z-30">
+      {/* <div className="absolute top-6 left-6 z-30">
         <Link 
           href="/" 
           className="inline-flex items-center gap-2 text-xs font-bold bg-black/50 hover:bg-primary text-cream px-4 py-2 rounded-full border border-cream/20 transition-all backdrop-blur-sm"
         >
           <ArrowLeft size={16} /> Kembali ke Halaman Utama
         </Link>
-      </div>
+      </div> */}
 
       {/* ================= 1. HERO / BANNER HEADER ================= */}
       <section className="relative bg-secondary pt-20 pb-16 px-6 sm:px-12 text-center overflow-hidden border-b-8 border-primary">
@@ -160,14 +160,14 @@ Mohon tanggapannya. Terima kasih!`;
             </div>
 
             {/* Ilustrasi Maskot Ayam & Ikan Lele di Bawah Kiri */}
-            <div className="mt-8 pt-4 flex items-end justify-between relative min-h-[140px]">
+            <div className="mt-8 pt-4 flex items-end justify-between relative min-h-35">
               <img 
-                src="/images/mascot-chicken-phone.png" 
+                src="/images/maskot_1.webp" 
                 alt="Maskot Ayam Telepon" 
                 className="w-32 sm:w-40 object-contain drop-shadow-xl z-10" 
               />
               <img 
-                src="/images/fresh-catfish-illustration.png" 
+                src="/images/hero-chicken-catfish.webp" 
                 alt="Ilustrasi Ikan Lele" 
                 className="w-40 sm:w-56 object-contain drop-shadow-xl -ml-6" 
               />

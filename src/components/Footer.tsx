@@ -99,24 +99,7 @@ export default function LogisticsFooter() {
           </h4>
           <div className="grid grid-cols-4 sm:grid-cols-3 gap-2 sm:gap-3 w-full sm:w-4/5">
             <div className="bg-white rounded-full p-2 aspect-square flex items-center justify-center shadow-md">
-              <img src="/images/cert-iso.png" alt="ISO" className="w-full" />
-            </div>
-            <div className="bg-white rounded-full p-2 aspect-square flex items-center justify-center shadow-md">
-              <img
-                src="/images/cert-halal.png"
-                alt="Halal"
-                className="w-full"
-              />
-            </div>
-            <div className="bg-white rounded-full p-2 aspect-square flex items-center justify-center shadow-md">
-              <img src="/images/cert-gmp.png" alt="GMP" className="w-full" />
-            </div>
-            <div className="bg-white rounded-full p-2 aspect-square flex items-center justify-center shadow-md">
-              <img
-                src="/images/cert-haccp.png"
-                alt="HACCP"
-                className="w-full"
-              />
+              <img src="/images/sertifikasi/Halal_Indonesia.svg" alt="ISO" className="w-full" />
             </div>
           </div>
         </div>

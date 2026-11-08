@@ -4,6 +4,8 @@ import { Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCart from '@/components/FloatingCart';
+import { CartProvider } from '@/context/CartContext';
 import logo from './LOGO.png'
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -34,10 +36,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`${inter.variable} ${serif.variable} font-sans bg-gray-50 min-h-full flex flex-col`}>
-        <NavBar />
-        {children}
-        {/* Footer component diletakkan di sini */}
-        <Footer />
+        <CartProvider>
+          <NavBar />
+          {children}
+          {/* Footer component diletakkan di sini */}
+          <Footer />
+          {/* Keranjang Belanja Mengambang di Kanan Bawah */}
+          <FloatingCart />
+        </CartProvider>
       </body>
     </html>
   );

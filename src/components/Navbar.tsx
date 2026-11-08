@@ -14,7 +14,7 @@ export default function Header() {
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50 w-full bg-primary text-white shadow-lg">
+    <header className="absolute inset-x-0 top-0 z-50 w-full bg-transparent text-white shadow-lg">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8">
       <div className="w-7 h-7 sm:w-11 sm:h-11 bg-white rounded-full flex items-center justify-center text-primary text-[10px] sm:text-xs font-bold shadow-inner">
         <img src="/images/logo.webp" alt="logo" srcSet="/images/logo.webp" className="w-7 h-7 sm:w-11 sm:h-11 bg-white rounded-full flex items-center justify-center text-primary text-[10px] sm:text-xs font-bold shadow-inner"/>
@@ -46,7 +46,7 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute inset-x-4 top-full mt-3 rounded-xl border border-cream/20 bg-primary px-6 py-4 text-white shadow-2xl z-40 animate-fade-in-up flex flex-col gap-4">
+        <div className="lg:hidden absolute inset-x-4 top-full mt-3 rounded-xl border border-cream/20 bg-primary px-6 py-4 text-white shadow-2xl z-40 flex flex-col gap-4">
           {navLinks.map((link) => (
             <Link
               key={link.path}
