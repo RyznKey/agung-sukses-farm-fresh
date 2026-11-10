@@ -1,4 +1,5 @@
 // "use client";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
@@ -37,12 +38,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="font-sans bg-gray-50 min-h-full flex flex-col">
         <CartProvider>
-          <NavBar />
+          <Suspense fallback={<div className="h-[68px]" aria-hidden="true" />}>
+            <NavBar />
+          </Suspense>
           {children}
           {/* Footer component diletakkan di sini */}
           <Footer />
           {/* Keranjang Belanja Mengambang di Kanan Bawah */}
-          <FloatingCart />
+          <Suspense fallback={null}>
+            <FloatingCart />
+          </Suspense>
         </CartProvider>
       </body>
     </html>
