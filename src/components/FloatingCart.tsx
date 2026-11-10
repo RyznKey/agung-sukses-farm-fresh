@@ -3,10 +3,14 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { ShoppingCart, X, Plus, Minus, Trash2, ArrowRight, Check } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { ImageFallback } from "@/lib/ImageFallback";
 
 export default function FloatingCart() {
+  const pathname = usePathname();
+  const isProductsPage = pathname === "/products";
   const {
     cart,
     totalItems,
@@ -36,9 +40,9 @@ export default function FloatingCart() {
   return (
     <>
       {/* Toast Notifikasi Penambahan Produk */}
-      {addedNotice && (
+      {isProductsPage && addedNotice && (
         <div className="fixed bottom-24 right-6 z-50 bg-secondary text-cream px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-cream/30 animate-bounce">
-          <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0">
+          <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
             <Check size={14} />
           </div>
           <div>
@@ -48,24 +52,34 @@ export default function FloatingCart() {
         </div>
       )}
 
-      {/* Tombol Keranjang Melayang (Fixed Kanan Bawah) */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <button
-          type="button"
-          onClick={toggleCart}
-          aria-label="Buka Keranjang Belanja"
-          className="group relative flex items-center justify-center w-16 h-16 rounded-full bg-primary hover:bg-primary3 text-white shadow-2xl border-2 border-cream/30 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+      {/* Tombol keranjang di katalog produk, tombol WhatsApp di halaman lain */}
+      {isProductsPage ? (
+        <div className="fixed bottom-5 left-5 z-40 sm:bottom-6 sm:left-6">
+          <button
+            type="button"
+            onClick={toggleCart}
+            aria-label="Buka Keranjang Belanja"
+            className="group relative flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-cream/40 bg-primary text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-primary3 active:scale-95 sm:h-13 sm:w-13"
+          >
+            <ShoppingCart size={21} className="transition-transform group-hover:rotate-6" />
+            {totalItems > 0 && (
+              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full border-2 border-white bg-secondary px-1 text-[10px] font-black text-cream shadow-md">
+                {totalItems > 99 ? "99+" : totalItems}
+              </span>
+            )}
+          </button>
+        </div>
+      ) : (
+        <a
+          href="https://wa.me/6281804823455"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Hubungi Agung Sukses Farm Fresh melalui WhatsApp"
+          className="fixed bottom-5 left-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-transform hover:scale-105 sm:bottom-6 sm:left-6 sm:h-13 sm:w-13"
         >
-          <ShoppingCart size={26} className="group-hover:rotate-6 transition-transform" />
-
-          {/* Badge Jumlah Item */}
-          {totalItems > 0 && (
-            <span className="absolute -top-1.5 -right-1.5 bg-secondary text-cream text-xs font-black w-6 h-6 rounded-full flex items-center justify-center shadow-md border-2 border-white animate-pulse">
-              {totalItems > 99 ? "99+" : totalItems}
-            </span>
-          )}
-        </button>
-      </div>
+          <FaWhatsapp size={25} aria-hidden="true" />
+        </a>
+      )}
 
       {/* Pop Up Modal Keranjang Belanja */}
       {isCartOpen && (
@@ -279,4 +293,3 @@ export default function FloatingCart() {
     </>
   );
 }
-

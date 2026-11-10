@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Pacifico&display=swap');
 @import "tailwindcss";
 /* @tailwind base;
 @tailwind components;
@@ -29,6 +29,12 @@
   --color-brand-cream: #F5DABF;
   --color-brand-pink: #F5DABF;
   --color-brand-gray: #153230;
+
+  /* Tipografi: Kombinasi Modern & Clean */
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-serif: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-script: 'Pacifico', cursive;
 }
 
 :root {
@@ -61,8 +67,10 @@
   --brand-pink: #F5DABF;
   --brand-cream: #F5DABF;
 
-  /* Tipografi */
-  --font-sans: 'Inter', sans-serif;
+  /* Tipografi: Kombinasi Modern & Clean (Heading: Plus Jakarta Sans, Body: Inter) */
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-serif: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
   --font-script: 'Pacifico', cursive;
 }
 
@@ -76,6 +84,11 @@
     color: white;
     font-family: var(--font-sans);
     overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
   }
 }
 
@@ -125,7 +138,20 @@
   .border-brand-green { border-color: var(--brand-green); }
   .border-brand-bordo { border-color: var(--brand-bordo); }
 
-  /* Utilitas Tipografi */
+  /* Utilitas Tipografi (Kombinasi Modern & Clean: Heading: Plus Jakarta Sans, Body: Inter) */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body,
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .font-serif {
+    font-family: var(--font-heading);
+  }
+
   .font-script {
     font-family: var(--font-script);
     font-weight: normal;
@@ -142,6 +168,22 @@
 
   .animate-slide-in {
     animation: slideIn 0.5s ease-out forwards;
+  }
+
+  .animate-hero-image {
+    animation: heroImageReveal 1.2s ease-out both, heroImageDrift 24s ease-in-out 1.2s infinite alternate;
+  }
+
+  .animate-hero-backdrop {
+    animation: heroBackdropReveal 1.2s ease-out both, heroBackdropDrift 32s ease-in-out 1.2s infinite alternate;
+  }
+
+  .animate-hero-title {
+    animation: heroTitleReveal 1.1s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  }
+
+  .animate-hero-subject {
+    animation: heroSubjectFloat 5s ease-in-out 1.2s infinite;
   }
 }
 
@@ -177,5 +219,77 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroImageDrift {
+  from {
+    transform: scale(1.02);
+  }
+
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes heroBackdropDrift {
+  from {
+    transform: scale(1.06);
+  }
+
+  to {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes heroBackdropReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.45;
+  }
+}
+
+@keyframes heroTitleReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.5;
+  }
+
+  to {
+    clip-path: inset(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroSubjectFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-image,
+  .animate-hero-backdrop,
+  .animate-hero-subject,
+  .animate-hero-title {
+    animation: none;
   }
 }

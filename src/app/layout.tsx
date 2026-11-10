@@ -1,6 +1,6 @@
 // "use client";
 import type { Metadata } from "next";
-import { Inter, Merriweather, Geist, Geist_Mono } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,17 +8,17 @@ import FloatingCart from '@/components/FloatingCart';
 import { CartProvider } from '@/context/CartContext';
 import logo from './LOGO.png'
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const serif = Merriweather({ weight: ['400', '700', '900'], subsets: ["latin"], variable: '--font-serif' });
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ['500', '600', '700', '800'],
+  variable: '--font-plus-jakarta',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="id"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className={`${inter.variable} ${serif.variable} font-sans bg-gray-50 min-h-full flex flex-col`}>
+      <body className="font-sans bg-gray-50 min-h-full flex flex-col">
         <CartProvider>
           <NavBar />
           {children}

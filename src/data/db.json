@@ -13,7 +13,7 @@
       "nameEn": "meat (thigh, breast, wing)",
       "nameId": "Daging (paha, dada, sayap)",
       "category": "chicken",
-      "image": "/images/produk/ayamUtuh.jpg",
+      "image": "/images/produk/pahaDadaSayap.jpg",
       "price": 38000,
       "unit": "kg",
       "description": "Potongan daging ayam potong segar kualitas prima (kombinasi paha, dada, dan sayap). Bersih, higienis, 100% halal, serta dipotong dan dikemas setiap hari untuk menjaga kesegaran maksimal."
@@ -33,7 +33,7 @@
       "nameEn": "Skinless thigh fillet",
       "nameId": "Fillet paha tanpa kulit",
       "category": "chicken",
-      "image": "/images/produk/dadaFillet.jpg",
+      "image": "/images/produk/pahaFillet.jpg",
       "price": 50000,
       "unit": "kg",
       "description": "Fillet paha ayam tanpa kulit dan tulang. Daging juicy, lembut, dan gurih, sangat cocok untuk olahan sate ayam, chicken katsu, steak ayam, dan aneka masakan istimewa."
@@ -53,7 +53,7 @@
       "nameEn": "Chicken head",
       "nameId": "Kepala ayam",
       "category": "chicken",
-      "image": "/images/rawChickenPlateV1.webp",
+      "image": "/images/produk/kepalaAyam.jpg",
       "price": 1000,
       "unit": "pcs",
       "description": "Kepala ayam segar pilihan yang telah dibersihkan. Sangat cocok sebagai bahan pembuat kuah kaldu yang gurih dan sedap untuk masakan sup dan soto."
